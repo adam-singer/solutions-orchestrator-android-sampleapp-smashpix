@@ -43,11 +43,9 @@ Google Components:
 * Google Cloud Storage
 * Android
 
-## Download the following sample code:
+## Download the sample code:
 
-* [Backend Server (Google App Engine) zip file](TODO correct link once released)
-* [Command line daemon (Google Compute Engine) zip file](TODO correct link once released)
-* [Mobile Application (Android) zip file](TODO correct link once released)
+* [Smashpix sample application zip file](https://github.com/GoogleCloudPlatform/solutions-orchestrator-android-sampleapp-smashpix/archive/master.zip)
 
 ### Dependencies
 
@@ -283,5 +281,8 @@ You should have downloaded the mobile application sample code. Extract the files
 5. Copy the Google Play Service library
     * Browse to <code>[ANDROID\_SDK]/extras/google/google\_play\_services/libproject/google-play-services_lib/libs/</code>.
     * Copy <code>google-play-services.jar</code> into your Android code library folder, <code>[MOBILE\_APP\_CODE]/libs/</code>.
+6. Make sure all code dependencies are resolved.
+7. Run Android application.
+LE\_APP\_CODE]/libs/</code>.
 6. Make sure all code dependencies are resolved.
 7. Run Android application.
