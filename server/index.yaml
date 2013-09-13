@@ -1,0 +1,7 @@
+indexes:
+- kind: Bitdoc
+  ancestor: no
+  properties:
+  - name: timestamp
+  - name: user
+    direction: desc

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Image</title>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+<div class="header">
+  <a href="/" class="title">SMASHPIX</a>
+  <div class="info">
+    <p>
+      {{ greeting }}
+    </p>
+  </div>
+</div>
+
+<div class="content">
+  <form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+  <label>Image: </label>
+  <input name="file" type="file">
+  <input type="submit" value="Upload">
+  </form>
+</div>
+</body>
+</html>

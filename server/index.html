@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Smashpix</title>
+      <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/" class="title">SMASHPIX</a>
+      <div class="info">
+        <p>
+          {{ greeting }} <a href="/upload" class="button">Upload a new image</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="content">
+      {% for bitdoc in bitdocs %}
+      <div class="tile">
+        <div class="user">{{ bitdoc.user }}</div>
+        {% if bitdoc.image_8bit_link %}
+        <table>
+          <tr>
+            <td><a href="/get/image/{{bitdoc.key()}}?mode=original"><img src="{{bitdoc.image_link}}" alt="original image"></a></td>
+            <td><a href="/get/image/{{bitdoc.key()}}"><img src="{{bitdoc.image_8bit_link}}" alt="processed image"></a></td>
+          </tr>
+          <tr>
+            <td>{{ bitdoc.timestamp_strsafe }}</td>
+            <td>{{ bitdoc.timestamp_8bit_strsafe }}</td>
+          </tr>
+        </table>
+        {% else %}
+        <table>
+          <tr>
+            <td><a href="/get/image/{{bitdoc.key()}}?mode=original"><img src="{{bitdoc.image_link}}" alt="original image"></a></td>
+            <td><img src="http://commondatastorage.googleapis.com/8bit-images%2Fimage_proc.png" alt="Processing image"></td>
+          </tr>
+          <tr>
+            <td>{{ bitdoc.timestamp_strsafe }}</td>
+            <td></td>
+          </tr>
+        </table>
+        {% endif %}
+        <a href="/get/{{bitdoc.key()}}" class="button">Go to Entry</a>
+        <form action="/delete?id={{bitdoc.key()}}" method="post" class="delete">
+          <input type="submit" value="Delete Entry">
+        </form>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

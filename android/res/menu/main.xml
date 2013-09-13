@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionBarRefresh"
+        android:icon="@drawable/refresh"
+        android:showAsAction="ifRoom"
+        android:title="@string/refresh"/>
+    <item
+        android:id="@+id/actionBarPicture"
+        android:icon="@drawable/picture"
+        android:showAsAction="ifRoom"
+        android:title="@string/picture"/>
+    <item
+        android:id="@+id/actionBarCamera"
+        android:icon="@drawable/camera"
+        android:showAsAction="ifRoom"
+        android:title="@string/camera"/>
+
+</menu>

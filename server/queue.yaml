@@ -1,0 +1,6 @@
+total_storage_limit: 120M
+queue:
+- name: imagetasks
+  mode: pull
+  acl:
+  - user_email: [SERVICE_ACCOUNT]
